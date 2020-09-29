@@ -30,11 +30,14 @@ document.addEventListener("keydown", function (event) {
     }
 })
 
-// Changes home images to a random image on a click
-const images = querySelectorAll(".img-content > img");
-images[0].addEventListener("click", eventListener);
-function randomImage (event) {
-    images[0].src = "https://picsum.photos/200";
-}
+// Changes content images to a random image on a click
+const images = document.querySelectorAll(".img-content img");
+const imageOne = images[0];
+const imageTwo = images[1];
 
-images[0].addEventListener("click", randomImage);
+function eventListener (event) { }
+imageOne.addEventListener("click", eventListener);
+function randomImage (element ,event) {
+    element.src = "https://source.unsplash.com/random";
+}
+imageOne.addEventListener("click")
